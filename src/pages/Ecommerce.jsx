@@ -42,7 +42,7 @@ const Ecommerce = () => {
               color="white"
               bgColor="blue"
               text="Download"
-              boarderRadius="10px"
+              borderRadius="10px"
               size="md"
             />
           </div>
@@ -117,6 +117,29 @@ const Ecommerce = () => {
                 </p>
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
+              <div className="mt-5">
+                <SparkLine
+                currentColor="blue"
+                id="line-sparkline"
+                type="Line"
+                height="80px"
+                width="250px"
+                data={SparklineAreaData} // need to anayzle this line
+                color="blue"
+                />
+              </div>
+              <div className="mt-10">
+                <Button
+                color="white"
+                bgColor="blue"
+                text="Download Report"
+                boarderRadius="10px"
+                />
+              </div>
+
+            </div>
+            <div>
+              <Stacked width="320px" height="360px"/>
             </div>
           </div>
         </div>
