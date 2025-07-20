@@ -10,7 +10,7 @@ import './App.css'
 import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings } = useStateContext();
 
   return ( //If this whole fkn section for the setting button is only for the theme im losing my sht
     <div>
@@ -42,7 +42,9 @@ const App = () => {
           
 
           <div>
+            {themeSettings && <ThemeSettings/>}
             <Routes>
+              
               {/* Dashboard */}
               <Route path="/" element={<Ecommerce />} />
               <Route path="/ecommerce" element={<Ecommerce />} />
